@@ -1,0 +1,5 @@
+[sqf.banned_commands]
+options.ignore = ["createSoundSource", "addPublicVariableEventHandler"]
+
+# [sqf]
+# command_case = false

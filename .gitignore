@@ -1,0 +1,9 @@
+.vscode
+
+**/config.bin
+**/*.sqfc
+**/*.log
+
+.hemttout
+backup
+wip

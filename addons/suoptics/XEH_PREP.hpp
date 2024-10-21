@@ -1,0 +1,2 @@
+PREP(applySight);
+PREP(onSightOpen);

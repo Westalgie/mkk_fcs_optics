@@ -1,0 +1,11 @@
+name = "Serious Games DEV Mods";
+actionName = "Website";
+action = "http://tsgames.ru/";
+picture = "mod.paa";
+description = "Serious Games DEV Mods";
+logo = "mod.paa";
+logoOver = "mod.paa";
+overview = "Serious Games DEV Mods";
+hideName = 1;
+hidePicture = 0;
+author = "";

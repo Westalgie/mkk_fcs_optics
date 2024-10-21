@@ -1,0 +1,9 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+validate:
+  script:
+    - python3 tools/sqf_validator.py
+    - python3 tools/config_style_checker.py
+    - python3 tools/stringtable_validator.py

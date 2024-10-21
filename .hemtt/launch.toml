@@ -1,0 +1,22 @@
+[default]
+workshop = [
+    "583496184",  # CUP Terrains - Core
+    "843425103",  # RHSAFRF
+    "843577117",  # RHSUSAF
+    "843593391",  # RHSGREF
+    "843632231",  # RHSSAF
+    "2369477168", # Advanced Developer Tools
+]
+parameters = [
+    "-mod=\"C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_core;C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_islands;C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_mods;C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_connect;C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_server;C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_test;\"",
+    # C:\\Program Files (x86)\\Steam\\steamapps\\common\\SolidGames\\@sg_server;
+]
+mission = "test.VR"
+executable = "arma3profiling_x64"
+
+[profile]
+extends = "default"
+workshop = [
+    "1645973522", # Intercept Minimal Dev
+    "1652506957", # Arma Script Profiler
+]
