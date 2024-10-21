@@ -37,7 +37,7 @@ class RscInGameUI
                 {
                     idc=1;
                     style="0x30 + 0x800";
-                    colorText[]={1,0,0,1};
+                    colorText[]={0.7,0,0,1};
                     shadow=0;
                     font="EtelkaMonospacePro";
                     text="";
