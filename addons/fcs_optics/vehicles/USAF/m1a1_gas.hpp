@@ -17,9 +17,9 @@ class rhsusf_m1a1aimwd_usarmy_nofcs: rhsusf_m1a1aimwd_usarmy
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.233333;
-                    minFov = 0.233333;
-                    maxFov = 0.233333;
+                    initFov = 0.233;
+                    minFov = 0.233;
+                    maxFov = 0.233;
                     visionMode[] = {"Normal", "NVG"};
                     gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_M1A1_Periscope);
                     opticsDisplayName = "PERISCOPE";
@@ -27,9 +27,9 @@ class rhsusf_m1a1aimwd_usarmy_nofcs: rhsusf_m1a1aimwd_usarmy
                 class APFSDS: Periscope
                 {
                     opticsDisplayName = "ZOOM";
-                    initFov = (0.233333 / 8);
-                    minFov = (0.233333 / 8);
-                    maxFov = (0.233333 / 8);
+                    initFov = "0.233/8";
+                    minFov = "0.233/8";
+                    maxFov = "0.233/8";
                 };
             };
             turretInfoType = QGVAR(RscWeaponM1A1_GAS_FCS);

@@ -87,9 +87,9 @@ class mkk_leopard1a1_base: mkk_leopard1_base
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.233*2;
-                    minFov = 0.233*2;
-                    maxFov = 0.233*2;
+                    initFov = "0.233*2";
+                    minFov = "0.233*2";
+                    maxFov = "0.233*2";
                     visionMode[] = {"Normal","NVG"};
                     gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_Empty_Circle);
                     gunnerOpticsEffect[] = {};
@@ -97,9 +97,9 @@ class mkk_leopard1a1_base: mkk_leopard1_base
                 class Narrow: Periscope
                 {
                     opticsDisplayName = "NARROW";
-                    initFov = (0.233333 / 8);
-                    minFov = (0.233333 / 8);
-                    maxFov = (0.233333 / 8);
+                    initFov = "0.233 / 8";
+                    minFov = "0.233 / 8";
+                    maxFov = "0.233 / 8";
                 };
             };
             weapons[] = {"mkk_leo_weap_l7a3_nofcs","mkk_MG3_nofcs"};
