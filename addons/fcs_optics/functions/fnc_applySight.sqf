@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 _this select 0 params ["_display", "_turretPath", "_reticles"];
-
+TRACE_1("Reticles",_reticles);
 _vehicle = vehicle player;
 
 _shouldClose = [false, true] select (isNull _display || {_vehicle isEqualTo player || {_vehicle unitTurret player isNotEqualTo _turretPath || {!alive _vehicle || {!alive player}}}});
@@ -20,7 +20,7 @@ _currentMagIndex = _reticles select 0 findIf {_x in _magazines};
 if (_currentMagIndex isEqualTo -1) exitWith {
     
     switch (_mode) do {
-        case "PERISCOPE": {_sight ctrlSetText ""};
+        case "PERISCOPE": {_sight ctrlSetText (_reticles select 3)};
         case "ZOOM": {_sight ctrlSetText (_reticles select 1 select (_reticles select 2))};
     };
 };
@@ -31,7 +31,7 @@ _vehicle setVariable [QGVAR(currentMag), _currentMag];
 
 switch(_mode)do{
     case "PERISCOPE": {
-        _sight ctrlSetText "";
+        _sight ctrlSetText (_reticles select 3);
     };
     case "ZOOM": {
         // switch optic effect
