@@ -97,47 +97,6 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
             weapon = "mkk_m60_m85_nofcs";
         };
     };
-
-    // class MKK_CSW
-    // {
-    //     enabled = 1;
-    //     csw_weapons[] = {
-    //         "mkk_m60_m73_nofcs","mkk_m60_m85_nofcs","mkk_m60_m68_nofcs"
-    //     };
-    //     class mkk_m60_m73_nofcs {
-    //         condition = "!(isTurnedOut _player)";
-    //         can_refill = "false";
-    //         loadable_magazines[] = weap_m240_loadable_magazines;
-    //         weapon_magazines[] = weap_m240_coax_weapon_magazines;
-    //         max_magazine_count = 12;
-    //         turrets[] = {{0},{0,1}};
-    //         weapon_turret[] = {0};
-    //         loading_time = 0.5;
-    //         unloading_time = 0.5;
-    //     };
-    //     class mkk_m60_m85_nofcs {
-    //         condition = "!(isTurnedOut _player)";
-    //         can_refill = "true";
-    //         loadable_magazines[] = weap_m2_loadable_magazines;
-    //         weapon_magazines[] = {"rhs_mag_100rnd_127x99_mag_Tracer_Red"};
-    //         max_magazine_count = 4;
-    //         turrets[] = {{0,0}};
-    //         weapon_turret[] = {0,0};
-    //         loading_time = 0.5;
-    //         unloading_time = 0.5;
-    //     };
-    //     class mkk_m60_m68_nofcs {
-    //         condition = "!(isTurnedOut _player)";
-    //         can_refill = "false";
-    //         loadable_magazines[] = {"mkk_csw_m60_mag_m774","mkk_csw_m60_mag_m456a2","mkk_csw_m60_mag_m393a2"};
-    //         weapon_magazines[] = {"mkk_m60_mag_m774","mkk_m60_mag_m456a2","mkk_m60_mag_m393a2"};
-    //         max_magazine_count = 1;
-    //         turrets[] = {{0,1}};
-    //         weapon_turret[] = {0};
-    //         loading_time = 6;
-    //         unloading_time = 4;
-    //     };
-    // };
 };
 
 class mkk_m60a1_b: mkk_m60a1_base

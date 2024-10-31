@@ -4,17 +4,27 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[]= {
-            "rhsusf_m1a1aimwd_usarmy_nofcs"
+            "mkk_m1a1aim_nofcs",
+            "mkk_m60a1_b",
+            "mkk_m60a1_r",
+            "mkk_m60a1_g",
+            "mkk_leopard1a1",
+            "mkk_leopard1a1_r",
+            "mkk_leopard1a1_g"
         };
         weapons[]={
             "rhs_weap_m256_nofcs",
-            "rhs_weap_m240_abrams_coax"
+            "rhs_weap_m240_abrams_coax_nofcs",
+            "mkk_m60_m68_nofcs",
+            "mkk_m60_m73_nofcs",
+            "mkk_m60_m85_nofcs",
+            "mkk_leo_weap_l7a3_nofcs",
+            "mkk_MG3_nofcs"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "mkk_main",
             "mkk_rhs_usaf_fix_m_c",
-            "rhsusf_c_m1a1",
             "mkk_m60a3_c",
             "leopard1_c"
         };

@@ -1,6 +1,6 @@
 class rhsusf_m1a1tank_base : MBT_01_base_F {};
 class rhsusf_m1a1aimwd_usarmy: rhsusf_m1a1tank_base {};
-class rhsusf_m1a1aimwd_usarmy_nofcs: rhsusf_m1a1aimwd_usarmy
+class mkk_m1a1aim_nofcs: rhsusf_m1a1aimwd_usarmy
 {
     displayName = "M1A1AIM (GAS)";
     class Turrets: Turrets
@@ -64,69 +64,4 @@ class rhsusf_m1a1aimwd_usarmy_nofcs: rhsusf_m1a1aimwd_usarmy
             weapon = "rhs_weap_m256_nofcs";
         };
     };
-    // TODO: Перенести в ручную зарядку!
-    // class MKK_CSW
-    // {
-    //     enabled=1;
-    //     csw_weapons[]=
-    //     {
-    //         "RHS_M2_Abrams_Commander",
-    //         "rhs_weap_m240_abrams",
-    //         "rhs_weap_m256_nofcs",
-    //         "rhs_weap_m240_abrams_coax_nofcs"
-    //     };
-    //     class rhs_weap_m256_nofcs
-    //     {
-    //         condition="!(isTurnedOut _player)";
-    //         can_refill="false";
-    //         loadable_magazines[]=
-    //         {
-    //             "mkk_mag_M829A3",
-    //             "mkk_mag_M830A1",
-    //             "mkk_mag_M1069"
-    //         };
-    //         weapon_magazines[]=
-    //         {
-    //             "mkk_csw_mag_M829A3",
-    //             "mkk_csw_mag_M830A1",
-    //             "mkk_csw_mag_M1069"
-    //         };
-    //         max_magazine_count=1;
-    //         turrets[]=
-    //         {
-    //             {0,1}
-    //         };
-    //         weapon_turret[]={0};
-    //         loading_time=7;
-    //         unloading_time=4;
-    //     };
-    //     class rhs_weap_m240_abrams_coax_nofcs
-    //     {
-    //         condition="!(isTurnedOut _player)";
-    //         can_refill="false";
-    //         loadable_magazines[]=
-    //         {
-    //             "rhsusf_100Rnd_762x51",
-    //             "rhsusf_100Rnd_762x51_m80a1epr",
-    //             "rhsusf_100Rnd_762x51_m61_ap",
-    //             "rhsusf_100Rnd_762x51_m62_tracer"
-    //         };
-    //         weapon_magazines[]=
-    //         {
-    //             "mkk_100Rnd_762x51",
-    //             "mkk_100Rnd_762x51_m80a1epr",
-    //             "mkk_100Rnd_762x51_m61_ap",
-    //             "mkk_100Rnd_762x51_m62_tracer"
-    //         };
-    //         max_magazine_count=12;
-    //         turrets[]=
-    //         {
-    //             {0},
-    //             {0,1}
-    //         };
-    //         weapon_turret[]={0};
-    //         loading_time=0.5;
-    //         unloading_time=0.5;
-    //     };
-    // };
 };
