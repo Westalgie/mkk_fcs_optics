@@ -15,11 +15,16 @@ class cfgWeapons
     // M60A1
     class mkk_m60_m68;
     class mkk_m60_m73;
+    class mkk_m60_m85;
     class mkk_m60_m68_nofcs: mkk_m60_m68
     {
         ballisticsComputer = "2";
     };
     class mkk_m60_m73_nofcs: mkk_m60_m73
+    {
+        ballisticsComputer = "2";
+    };
+    class mkk_m60_m85_nofcs: mkk_m60_m85
     {
         ballisticsComputer = "2";
     };

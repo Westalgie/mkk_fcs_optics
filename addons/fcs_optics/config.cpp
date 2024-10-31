@@ -15,7 +15,8 @@ class CfgPatches {
             "mkk_main",
             "mkk_rhs_usaf_fix_m_c",
             "rhsusf_c_m1a1",
-            "mkk_m60a3_c"
+            "mkk_m60a3_c",
+            "leopard1_c"
         };
         author = "Westalgie";
         authors[] = {"Westalgie"};

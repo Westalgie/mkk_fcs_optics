@@ -2,7 +2,7 @@ class mkk_m60_base: Tank_F {};
 class mkk_m60a3_tts_base: mkk_m60_base {};
 class mkk_m60a1_base: mkk_m60a3_tts_base
 {
-    author = "lemfy, Westalgie";
+    author = "lemfy";
     displayName = "M60A1 RISE (P)";
     class Turrets: Turrets
     {
@@ -43,14 +43,6 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
             {
                 class CommanderOptics: CommanderOptics
                 {
-                    class ViewOptics: ViewOptics
-                    {
-                        initFov = 0.4375;
-                        maxFov = 0.4375;
-                        minFov = 0.03482;
-                        thermalMode[] = {0,1};
-                        visionMode[] = {"Normal","NVG"};
-                    };
                     class OpticsIn
                     {
                         class Wide
@@ -65,22 +57,19 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
                             minFov = "0.233*1.5";
                             maxFov = "0.233*1.5";
                             visionMode[] = {"Normal","NVG"};
-                            gunnerOpticsModel = "\mkk_cup_vehicles\comOptics_M1A1.p3d";
+                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Periscope);
                             gunnerOpticsEffect[] = {};
                         };
                         class Narrow: Wide
                         {
-                            initFov = "0.233/2";
-                            minFov = "0.233/2";
-                            maxFov = "0.233/2";
-                        };
-                        class Narrow2x: Narrow
-                        {
-                            initFov = "0.233/7";
-                            minFov = "0.233/7";
-                            maxFov = "0.233/7";
+                            initFov = "0.233/6";
+                            minFov = "0.233/6";
+                            maxFov = "0.233/6";
+                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Narrow);
                         };
                     };
+                    weapons[] = {"mkk_m60_m85_nofcs"};
+                    discreteDistance[] = {800};
                 };
             };
         };
@@ -102,13 +91,18 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
             source = "ammorandom";
             weapon = "mkk_m60_m73_nofcs";
         };
+        class muzzle_rot_HMG
+        {
+            source = "ammorandom";
+            weapon = "mkk_m60_m85_nofcs";
+        };
     };
 
     // class MKK_CSW
     // {
     //     enabled = 1;
     //     csw_weapons[] = {
-    //         "mkk_m60_m73_nofcs","mkk_m60_m85","mkk_m60_m68_nofcs"
+    //         "mkk_m60_m73_nofcs","mkk_m60_m85_nofcs","mkk_m60_m68_nofcs"
     //     };
     //     class mkk_m60_m73_nofcs {
     //         condition = "!(isTurnedOut _player)";
@@ -121,7 +115,7 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
     //         loading_time = 0.5;
     //         unloading_time = 0.5;
     //     };
-    //     class mkk_m60_m85 {
+    //     class mkk_m60_m85_nofcs {
     //         condition = "!(isTurnedOut _player)";
     //         can_refill = "true";
     //         loadable_magazines[] = weap_m2_loadable_magazines;
