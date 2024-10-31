@@ -15,16 +15,16 @@
     a: reyhard
 */
 
-if(not( isNull (uiNameSpace getVariable ["MKK_LEOPARD1A1_Ctrl",displayNull]))) exitWith{};
+if(not( isNull (uiNamespace getVariable ["MKK_LEOPARD1A1_Ctrl",displayNull]))) exitWith{};
 
 // remove additional handler if it's present
-if( not ( (uiNameSpace getVariable ["mkk_tzf_1a_eh",-1]) isEqualTo -1))then{
-    (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNameSpace getVariable "mkk_tzf_1a_eh"];
-    (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNameSpace getVariable "mkk_tzf_1a_eh_up"];
-    //systemChat format[" %1 reload passed",(uiNameSpace getVariable ["rhs_hatch_handler_eh",-1])];
+if( not ( (uiNamespace getVariable ["mkk_tzf_1a_eh",-1]) isEqualTo -1))then{
+    (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNamespace getVariable "mkk_tzf_1a_eh"];
+    (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNamespace getVariable "mkk_tzf_1a_eh_up"];
+    //systemChat format[" %1 reload passed",(uiNamespace getVariable ["rhs_hatch_handler_eh",-1])];
 };
 
-uiNameSpace setVariable ["MKK_LEOPARD1A1_Ctrl",_this select 0];
+uiNamespace setVariable ["MKK_LEOPARD1A1_Ctrl",_this select 0];
 
 rhs_key_opn_cmp_GLB        = (profileNamespace getVariable ["rhs_key_opn_cmp","Binocular"]);
 rhs_key_rng_up_GLB        = (profileNamespace getVariable ["rhs_key_rng_up","ZeroingUp"]);
@@ -39,7 +39,7 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
     params["_v","_mode_old","_restricted","_time"];
 
     private _currentWeapon = _v currentWeaponTurret [0];
-    if(_currentWeapon in _restricted)then
+    if(_currentWeapon in _restricted) then
     {
         private _weaponsList = _v weaponsTurret [0];
         _weaponsList = _weaponsList - _restricted;
@@ -59,14 +59,14 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
         {
 
             // deinitialization part
-            if(  ctrlText ( (uiNamespace getVariable "MKK_LEOPARD1A1_Ctrl")  displayCtrl 1000) != "MKK_SIGHT_TZF_1A" )exitWith{
+            if(  ctrlText ( (uiNamespace getVariable "MKK_LEOPARD1A1_Ctrl")  displayCtrl 1000) != "MKK_SIGHT_TZF_1A" ) exitWith {
                 // remove event handlers & deinitalize variables
-                (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNameSpace getVariable "mkk_tzf_1a_eh"];
-                (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNameSpace getVariable "mkk_tzf_1a_eh_up"];
+                (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNamespace getVariable "mkk_tzf_1a_eh"];
+                (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNamespace getVariable "mkk_tzf_1a_eh_up"];
                 ["mkk_leopard1a1_sight_handler", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-                uiNameSpace setVariable ["MKK_LEOPARD1A1_Ctrl",displayNull];
-                {uiNameSpace setVariable [_x,nil]}foreach ["mkk_tzf_1a_eh","mkk_tzf_1a_eh_up"];
-                {_x = nil}foreach [rhs_fnc_moveReticle];
+                uiNamespace setVariable ["MKK_LEOPARD1A1_Ctrl",displayNull];
+                {uiNamespace setVariable [_x,nil]} forEach ["mkk_tzf_1a_eh","mkk_tzf_1a_eh_up"];
+                {_x = nil} forEach [rhs_fnc_moveReticle];
 
                 //systemChat "removing EH";
             };
@@ -80,16 +80,16 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
 
             switch(_mode)do{
                 case "PERISCOPE" : {
-                    {_x ctrlSetTextColor [0.7,0.074,0.02,1]; }foreach [_bar]; //придаем цвет сетки, чтобы ее было можно видеть
-                    {_x ctrlSetTextColor [0.7,0.074,0.02,0]; }foreach [_sight]; //придаем цвет сетки, чтобы ее было можно видеть
-                    {_x ctrlSetTextColor [0.9, 0, 0, 0]; }foreach [_rng];
+                    {_x ctrlSetTextColor [0.7,0.074,0.02,1]; } forEach [_bar]; //придаем цвет сетки, чтобы ее было можно видеть
+                    {_x ctrlSetTextColor [0.7,0.074,0.02,0]; } forEach [_sight]; //придаем цвет сетки, чтобы ее было можно видеть
+                    {_x ctrlSetTextColor [0.9, 0, 0, 0]; } forEach [_rng];
                     _bar ctrlSetText QPATHTOF(data\reticles\WST_tzf_1a_sight_ca.paa);
                     _sight ctrlCommit 0.001;
                     _bar ctrlCommit 0.001;
                 };
                 case "NARROW" : {
-                    {_x ctrlSetTextColor [0.7,0.074,0.02,1]; }foreach [_bar,_sight];
-                    {_x ctrlSetTextColor [0.9, 0, 0, 1]; }foreach [_rng];
+                    {_x ctrlSetTextColor [0.7,0.074,0.02,1]; } forEach [_bar,_sight];
+                    {_x ctrlSetTextColor [0.9, 0, 0, 1]; } forEach [_rng];
                     _sight ctrlSetText QPATHTOF(data\reticles\WST_tzf_1a_x8_sight_ca.paa);
                     _bar ctrlSetText QPATHTOF(data\reticles\WST_tzf_1a_x8_bar_ca.paa);
                     // _bar ctrlSetText "leopard1a1\data\reference_ca.paa";
@@ -108,17 +108,17 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
 rhs_fnc_moveReticle = 
 {
     // exit if play is not in optic mode
-    if(cameraView != "GUNNER")exitWith{};
+    if(cameraView != "GUNNER") exitWith {};
 
     params["_dir"];
 
     disableSerialization;
 
     private _sight    = (uiNamespace getVariable "MKK_LEOPARD1A1_Ctrl" displayCtrl 1);
-    private _t        = (ctrLPosition _sight) select 1;
+    private _t        = (ctrlPosition _sight) select 1;
     private _move    = _t+0.003*_dir;
-    if( (_move <=(16.86 *   (0.025 * SafezoneH))) && (_move >= (3.66 *   (0.025 * SafezoneH))) )then{
-        _sight ctrlSetPosition [(ctrLPosition _sight) select 0,_move];
+    if( (_move <=(16.86 *   (0.025 * safeZoneH))) && (_move >= (3.66 *   (0.025 * safeZoneH))) ) then {
+        _sight ctrlSetPosition [(ctrlPosition _sight) select 0,_move];
         _sight ctrlCommit 0.005;
     };
 };
@@ -136,7 +136,7 @@ _id =  (findDisplay 46) displayAddEventHandler ["KeyDown", {
 _id2 =  (findDisplay 46) displayAddEventHandler ["KeyUp", {
     private _handle=false;
 
-    if(((actionKeys "nightVision") select 0) isEqualTo (_this select 1))then
+    if(((actionKeys "nightVision") select 0) isEqualTo (_this select 1)) then
     {
         disableSerialization;
         private _sight = (uiNamespace getVariable "MKK_LEOPARD1A1_Ctrl" displayCtrl 1);
@@ -144,5 +144,5 @@ _id2 =  (findDisplay 46) displayAddEventHandler ["KeyUp", {
     };
     _handle;
 }];
-uiNameSpace setVariable ["mkk_tzf_1a_eh",_id];
-uiNameSpace setVariable ["mkk_tzf_1a_eh_up",_id2];
+uiNamespace setVariable ["mkk_tzf_1a_eh",_id];
+uiNamespace setVariable ["mkk_tzf_1a_eh_up",_id2];
