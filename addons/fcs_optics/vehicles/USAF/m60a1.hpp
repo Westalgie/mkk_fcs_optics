@@ -1,4 +1,14 @@
-class mkk_m60_base: Tank_F {};
+class mkk_m60_base: Tank_F 
+{
+    class Turrets: Turrets
+    {
+        class MainTurret: MainTurret
+        {
+            class CommanderOptics;
+            class Loader: CommanderOptics {};
+        };
+    };
+};
 class mkk_m60a3_tts_base: mkk_m60_base {};
 class mkk_m60a1_base: mkk_m60a3_tts_base
 {
@@ -71,6 +81,7 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
                     weapons[] = {"mkk_m60_m85_nofcs"};
                     discreteDistance[] = {800};
                 };
+                class Loader: Loader {};
             };
         };
     };
