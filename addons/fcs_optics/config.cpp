@@ -26,7 +26,8 @@ class CfgPatches {
             "mkk_main",
             "mkk_rhs_usaf_fix_m_c",
             "mkk_m60a3_c",
-            "leopard1_c"
+            "leopard1_c",
+            "mkk_t55a"
         };
         author = "Westalgie";
         authors[] = {"Westalgie"};
@@ -89,6 +90,7 @@ class CfgVehicles
     #include "vehicles\USAF\m1a1_gas.hpp"
     #include "vehicles\USAF\m60a1.hpp"
     #include "vehicles\BW\leopard1a1.hpp"
+    #include "vehicles\SUAF\t55a.hpp"
 };
 
 #include "Rsc.hpp"
