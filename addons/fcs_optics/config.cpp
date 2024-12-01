@@ -14,7 +14,7 @@ class CfgPatches {
             "t55_r",
             "t55_b",
             "t55_g",
-            "wst_t55a_r",
+            "t55a_r",
             "t55a_b",
             "t55a_g"
         };
@@ -33,7 +33,7 @@ class CfgPatches {
             "mkk_rhs_usaf_fix_m_c",
             "mkk_m60a3_c",
             "leopard1_c",
-            "mkk_t55a"
+            "mkk_t55a_c"
         };
         author = "Westalgie";
         authors[] = {"Westalgie"};

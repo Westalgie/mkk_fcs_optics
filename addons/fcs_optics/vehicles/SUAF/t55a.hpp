@@ -106,7 +106,7 @@ class t55_g: mkk_t55_wst_base
     hiddenSelectionsTextures[] = {"mkk_t55a\data\body_chdkz_co.paa","mkk_t55a\data\turret_chdkz_co.paa","mkk_t55a\data\gun_chdkz_co.paa"};
 };
 
-class wst_t55a_r: mkk_t55a_wst_base
+class t55a_r: mkk_t55a_wst_base
 {
     side = 0;
     scope = 2;
