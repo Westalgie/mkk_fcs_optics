@@ -10,7 +10,13 @@ class CfgPatches {
             "mkk_m60a1_g",
             "mkk_leopard1a1",
             "mkk_leopard1a1_r",
-            "mkk_leopard1a1_g"
+            "mkk_leopard1a1_g",
+            "t55_r",
+            "t55_b",
+            "t55_g",
+            "wst_t55a_r",
+            "t55a_b",
+            "t55a_g"
         };
         weapons[]={
             "rhs_weap_m256_nofcs",

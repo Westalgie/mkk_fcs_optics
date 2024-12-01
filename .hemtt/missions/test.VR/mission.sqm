@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=46;
+		nextID=77;
 	};
 	class Camera
 	{
-		pos[]={0.092447847,16.29108,989.19531};
-		dir[]={0.024817659,-0.64666241,0.76237887};
-		up[]={0.021039691,0.76277459,0.64632362};
-		aside[]={0.99947637,7.9671736e-09,-0.032535776};
+		pos[]={6.6801672,22.230782,-13.12792};
+		dir[]={-0.025137642,-0.53844208,0.84228826};
+		up[]={-0.016062362,0.84266257,0.53820252};
+		aside[]={0.99955612,7.9162419e-09,0.029831178};
 	};
 };
 binarizationWanted=0;
@@ -23,8 +23,8 @@ sourceName="test";
 addons[]=
 {
 	"mkk_rebalance_bis",
-	"mkk_fcs_optics",
-	"A3_Structures_F_Mark_VR_Shapes"
+	"A3_Structures_F_Mark_VR_Shapes",
+	"mkk_fcs_optics"
 };
 class AddonsMetaData
 {
@@ -38,16 +38,16 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="mkk_fcs_optics";
-			name="MKK - FCS_Optics";
-			author="Westalgie";
-		};
-		class Item2
-		{
 			className="A3_Structures_F_Mark";
 			name="Arma 3 Marksmen - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="mkk_fcs_optics";
+			name="MKK - FCS_Optics";
+			author="Westalgie";
 		};
 	};
 };
@@ -86,7 +86,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=3;
 		class Item0
 		{
 			dataType="Group";
@@ -99,7 +99,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={153.73718,5.0493565,17.02503};
+						position[]={-3,5.0493565,0.99866843};
 					};
 					side="West";
 					flags=7;
@@ -109,7 +109,6 @@ class Mission
 					};
 					id=1;
 					type="mkk_Survivor_B";
-					atlOffset=0.047917366;
 				};
 			};
 			class Attributes
@@ -128,7 +127,7 @@ class Mission
 					{
 						linkID=0;
 						item0=1;
-						item1=16;
+						item1=76;
 						class CustomData
 						{
 							role=2;
@@ -144,37 +143,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={0,8.082592,0};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-			};
-			id=16;
-			type="wst_t55";
-		};
-		class Item2
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={0.5,5.5,1000};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=44;
-			type="Land_VR_Shape_01_cube_1m_F";
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={-0.5,5.5,1000};
+				position[]={0,5.5,1400};
 			};
 			side="Empty";
 			flags=5;
@@ -183,6 +152,21 @@ class Mission
 			};
 			id=45;
 			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={0,8.082592,0};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=76;
+			type="wst_t55a_r";
 		};
 	};
 };
