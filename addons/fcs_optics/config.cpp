@@ -10,7 +10,13 @@ class CfgPatches {
             "mkk_m60a1_g",
             "mkk_leopard1a1",
             "mkk_leopard1a1_r",
-            "mkk_leopard1a1_g"
+            "mkk_leopard1a1_g",
+            "t55_r",
+            "t55_b",
+            "t55_g",
+            "t55a_r",
+            "t55a_b",
+            "t55a_g"
         };
         weapons[]={
             "rhs_weap_m256_nofcs",
@@ -26,7 +32,8 @@ class CfgPatches {
             "mkk_main",
             "mkk_rhs_usaf_fix_m_c",
             "mkk_m60a3_c",
-            "leopard1_c"
+            "leopard1_c",
+            "mkk_t55a_c"
         };
         author = "Westalgie";
         authors[] = {"Westalgie"};
@@ -89,6 +96,7 @@ class CfgVehicles
     #include "vehicles\USAF\m1a1_gas.hpp"
     #include "vehicles\USAF\m60a1.hpp"
     #include "vehicles\BW\leopard1a1.hpp"
+    #include "vehicles\SUAF\t55a.hpp"
 };
 
 #include "Rsc.hpp"
