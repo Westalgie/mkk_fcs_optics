@@ -15,7 +15,7 @@
     a: reyhard
 */
 
-if(not( isNull (uiNamespace getVariable ["MKK_T55_Ctrl",displayNull]))) exitWith{};
+if(not( isNull (uiNamespace getVariable ["MKK_T55A_Ctrl",displayNull]))) exitWith{};
 
 // remove additional handler if it's present
 if( not ( (uiNamespace getVariable ["mkk_tsh_2_32_eh",-1]) isEqualTo -1))then{
@@ -24,7 +24,7 @@ if( not ( (uiNamespace getVariable ["mkk_tsh_2_32_eh",-1]) isEqualTo -1))then{
     //systemChat format[" %1 reload passed",(uiNamespace getVariable ["rhs_hatch_handler_eh",-1])];
 };
 
-uiNamespace setVariable ["MKK_T55_Ctrl",_this select 0];
+uiNamespace setVariable ["MKK_T55A_Ctrl",_this select 0];
 
 rhs_key_opn_cmp_GLB        = (profileNamespace getVariable ["rhs_key_opn_cmp","Binocular"]);
 rhs_key_rng_up_GLB        = (profileNamespace getVariable ["rhs_key_rng_up","ZeroingUp"]);
@@ -53,27 +53,27 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
     {
         _this set [3,time+0.01];
 
-        private _mode = ctrlText (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 154);
+        private _mode = ctrlText (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 154);
         // check if mode was changed
         if(_mode!=_mode_old)then
         {
 
             // deinitialization part
-            if(  ctrlText ( (uiNamespace getVariable "MKK_T55_Ctrl")  displayCtrl 1000) != "MKK_SIGHT_TSH_2B_32P" ) exitWith {
+            if(  ctrlText ( (uiNamespace getVariable "MKK_T55A_Ctrl")  displayCtrl 1000) != "MKK_SIGHT_TSH_2B_32P" ) exitWith {
                 // remove event handlers & deinitalize variables
                 (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNamespace getVariable "mkk_tsh_2_32_eh"];
                 (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNamespace getVariable "mkk_tsh_2_32_eh_up"];
                 ["mkk_leopard1a1_sight_handler", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-                uiNamespace setVariable ["MKK_T55_Ctrl",displayNull];
+                uiNamespace setVariable ["MKK_T55A_Ctrl",displayNull];
                 {uiNamespace setVariable [_x,nil]} forEach ["mkk_tsh_2_32_eh","mkk_tsh_2_32_eh_up"];
                 {_x = nil} forEach [rhs_fnc_moveReticle];
 
                 //systemChat "removing EH";
             };
 
-            private _sight = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 1);
-            private _bar = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 2);
-            private _rng = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 198);
+            private _sight = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 1);
+            private _bar = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 2);
+            private _rng = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 198);
             private _v = vehicle (call rhs_fnc_findPlayer);
             _this set [0,_v];
             //systemChat format["updating vehicle %1",_mode];
@@ -113,7 +113,7 @@ rhs_fnc_moveReticle =
 
     disableSerialization;
 
-    private _sight    = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 1);
+    private _sight    = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 1);
     private _t        = (ctrlPosition _sight) select 1;
     private _move    = _t+0.003*_dir;
     if((_move <= (0 * (0.025 * safeZoneH) - (5 * (0.01875 * safeZoneH)))) && (_move >= (0 * (0.025 * safeZoneH) - (29 * (0.01875 * safeZoneH))))) then {
@@ -138,8 +138,8 @@ _id2 =  (findDisplay 46) displayAddEventHandler ["KeyUp", {
     if(((actionKeys "nightVision") select 0) isEqualTo (_this select 1)) then
     {
         disableSerialization;
-        private _sight = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 1);
-        private _bar = (uiNamespace getVariable "MKK_T55_Ctrl" displayCtrl 2);
+        private _sight = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 1);
+        private _bar = (uiNamespace getVariable "MKK_T55A_Ctrl" displayCtrl 2);
     };
     _handle;
 }];
