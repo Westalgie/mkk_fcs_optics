@@ -1,6 +1,6 @@
 #define COMPONENT fcs_optics
 #define COMPONENT_BEAUTIFIED FCS_Optics
-#include "\x\mkk\addons\main\script_mod.hpp"
+#include "\x\mkk\addons\sys\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -13,5 +13,5 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_FCS_OPTICS
 #endif
 
-#include "\x\mkk\addons\main\script_macros.hpp"
+#include "\x\mkk\addons\sys\script_macros.hpp"
 #include "script_macros.hpp"

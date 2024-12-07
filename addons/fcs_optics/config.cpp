@@ -29,7 +29,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "mkk_main",
+            "mkk_sys",
             "mkk_rhs_usaf_fix_m_c",
             "mkk_m60a3_c",
             "leopard1_c",

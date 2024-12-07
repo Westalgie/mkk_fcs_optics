@@ -12,5 +12,3 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
-
-#include "CfgSettings.hpp"

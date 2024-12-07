@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="MKK">
-    <Package name="Main">
-        <Key ID="STR_MKK_Main_author">
-            <Original>Tarantino</Original>
-            <Russian>Tarantino</Russian>
-        </Key>
-    </Package>
-</Project>

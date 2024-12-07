@@ -3,7 +3,7 @@ prefix = "mkk"
 mainprefix = "x"
 
 [version]
-path = "addons/main/script_version.hpp"
+path = "addons/sys/script_version.hpp"
 git_hash = 0
 
 [files]
