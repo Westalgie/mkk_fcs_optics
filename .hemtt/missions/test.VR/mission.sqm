@@ -8,20 +8,21 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=77;
+		nextID=111;
 	};
 	class Camera
 	{
-		pos[]={6.6801672,22.230782,-13.12792};
-		dir[]={-0.025137642,-0.53844208,0.84228826};
-		up[]={-0.016062362,0.84266257,0.53820252};
-		aside[]={0.99955612,7.9162419e-09,0.029831178};
+		pos[]={995.91034,16.839149,167.57668};
+		dir[]={0.027119158,-0.28133148,0.95922738};
+		up[]={0.0079505909,0.95961058,0.28121909};
+		aside[]={0.99960053,4.6566129e-10,-0.028260583};
 	};
 };
 binarizationWanted=0;
 sourceName="test";
 addons[]=
 {
+	"A3_Characters_F",
 	"mkk_rebalance_bis",
 	"A3_Structures_F_Mark_VR_Shapes",
 	"mkk_fcs_optics"
@@ -30,20 +31,27 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
 		{
 			className="mkk_rebalance_bis";
 			name="mkk_rebalance_bis";
 		};
-		class Item1
+		class Item2
 		{
 			className="A3_Structures_F_Mark";
 			name="Arma 3 Marksmen - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item3
 		{
 			className="mkk_fcs_optics";
 			name="MKK - FCS_Optics";
@@ -86,7 +94,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=3;
+		items=19;
 		class Item0
 		{
 			dataType="Group";
@@ -99,16 +107,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-3,5.0493565,0.99866843};
+						position[]={493,5.0493565,0.99866843};
 					};
 					side="West";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=1;
-					type="mkk_Survivor_B";
+					id=100;
+					type="B_crew_F";
 				};
 			};
 			class Attributes
@@ -126,8 +134,8 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=1;
-						item1=76;
+						item0=100;
+						item1=105;
 						class CustomData
 						{
 							role=2;
@@ -143,7 +151,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={0,5.5,1400};
+				position[]={431.86661,5.5,800};
 			};
 			side="Empty";
 			flags=5;
@@ -158,15 +166,256 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={0,8.082592,0};
+				position[]={439.86661,5.5,1200};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=79;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={447.86661,5.5,1600};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=81;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={463.86661,5.5,2000};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=83;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={427.86661,5.5,400};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=84;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={477.86661,5.5,2400};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=85;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={527.86658,5.5,3200};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=87;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={495.84573,5.5,3200};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=88;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={495.84573,5.5,3600};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=89;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={495.84573,5.5,4000};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=90;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={491.84573,5.5,2800};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=91;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={96,5.5,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=94;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={596,5.5,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=95;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={696,5.5,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=96;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={496,5.5,4400};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=102;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1000,8.082592,0};
 			};
 			side="West";
 			flags=6;
 			class Attributes
 			{
 			};
-			id=76;
-			type="wst_t55a_r";
+			id=105;
+			type="t55a_r";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1000,5.5,200};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="cube";
+			};
+			id=106;
+			type="Land_VR_Shape_01_cube_1m_F";
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1000,5.5,3400};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=110;
+			type="Land_VR_Shape_01_cube_1m_F";
 		};
 	};
 };

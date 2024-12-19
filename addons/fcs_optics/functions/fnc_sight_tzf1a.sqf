@@ -117,7 +117,7 @@ rhs_fnc_moveReticle =
     private _sight    = (uiNamespace getVariable "MKK_LEOPARD1A1_Ctrl" displayCtrl 1);
     private _t        = (ctrlPosition _sight) select 1;
     private _move    = _t+0.003*_dir;
-    if( (_move <=(16.86 *   (0.025 * safeZoneH))) && (_move >= (3.66 *   (0.025 * safeZoneH))) ) then {
+    if( (_move <=(17.86 *   (0.025 * safeZoneH))) && (_move >= (3.66 *   (0.025 * safeZoneH))) ) then {
         _sight ctrlSetPosition [(ctrlPosition _sight) select 0,_move];
         _sight ctrlCommit 0.005;
     };

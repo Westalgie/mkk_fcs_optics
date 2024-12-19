@@ -20,9 +20,9 @@
 		"mkk_m60_mag_m393a2"\
 	],\
 	[\
-        QPATHTOF(data\reticles\WST_m68_apfsds_he_ca.paa),\
+        QPATHTOF(data\reticles\WST_m68_apds_ca.paa),\
         QPATHTOF(data\reticles\WST_m68_heat_ca.paa),\
-        QPATHTOF(data\reticles\WST_m68_apfsds_he_ca.paa)\
+        QPATHTOF(data\reticles\WST_m68_he_ca.paa)\
 	],\
 	0,\
     QPATHTOF(data\reticles\WST_m68_periscope_ca.paa)\
