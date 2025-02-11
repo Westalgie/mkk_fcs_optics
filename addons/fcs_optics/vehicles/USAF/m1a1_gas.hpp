@@ -21,7 +21,7 @@ class mkk_m1a1aim_nofcs: rhsusf_m1a1aimwd_usarmy
                     minFov = 0.233;
                     maxFov = 0.233;
                     visionMode[] = {"Normal", "NVG"};
-                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_M1A1_Periscope);
+                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_M1A1_Periscope.p3d);
                     opticsDisplayName = "PERISCOPE";
                 };
                 class APFSDS: Periscope

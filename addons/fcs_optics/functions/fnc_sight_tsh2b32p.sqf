@@ -35,7 +35,7 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
 
 
 // loop handling different optics mode, weapon changing & transition fade effect
-["mkk_leopard1a1_sight_handler", "onEachFrame", {
+["mkk_t55a_sight_handler", "onEachFrame", {
     params["_v","_mode_old","_restricted","_time"];
 
     private _currentWeapon = _v currentWeaponTurret [0];
@@ -63,7 +63,7 @@ rhs_key_nxt_rnd_GLB        = (profileNamespace getVariable ["rhs_key_nxt_rnd","C
                 // remove event handlers & deinitalize variables
                 (findDisplay 46) displayRemoveEventHandler ["KeyDown", uiNamespace getVariable "mkk_tsh_2_32_eh"];
                 (findDisplay 46) displayRemoveEventHandler ["KeyUp", uiNamespace getVariable "mkk_tsh_2_32_eh_up"];
-                ["mkk_leopard1a1_sight_handler", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+                ["mkk_t55a_sight_handler", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
                 uiNamespace setVariable ["MKK_T55A_Ctrl",displayNull];
                 {uiNamespace setVariable [_x,nil]} forEach ["mkk_tsh_2_32_eh","mkk_tsh_2_32_eh_up"];
                 {_x = nil} forEach [rhs_fnc_moveReticle];

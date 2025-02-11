@@ -29,7 +29,7 @@ class mkk_leopard1a1_base: mkk_leopard1_base
                             minFov = 0.233*2.2;
                             maxFov = 0.233*2.2;
                             visionMode[] = {"Normal","NVG"};
-                            gunnerOpticsModel = "\A3\weapons_f\reticle\optics_binoculars";
+                            gunnerOpticsModel = "\A3\weapons_f\reticle\optics_binoculars.p3d";
                             gunnerOpticsEffect[] = {};
                         };
                         class Narrow: Wide
@@ -60,7 +60,7 @@ class mkk_leopard1a1_base: mkk_leopard1_base
                             minFov = 0.233*2.2;
                             maxFov = 0.233*2.2;
                             visionMode[] = {"Normal","NVG"};
-                            gunnerOpticsModel="\A3\weapons_f\reticle\optics_generic_empty_f";
+                            gunnerOpticsModel="\A3\weapons_f\reticle\optics_generic_empty_f.p3d";
                             gunnerOpticsEffect[] = {};
                         };
                         class Narrow: Wide
@@ -91,7 +91,7 @@ class mkk_leopard1a1_base: mkk_leopard1_base
                     minFov = "0.233*2";
                     maxFov = "0.233*2";
                     visionMode[] = {"Normal","NVG"};
-                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_Empty_Circle);
+                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_Empty_Circle.p3d);
                     gunnerOpticsEffect[] = {};
                 };
                 class Narrow: Periscope

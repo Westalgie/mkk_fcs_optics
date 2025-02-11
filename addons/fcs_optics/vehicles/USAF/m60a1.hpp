@@ -33,7 +33,7 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
                     minFov = "0.233*2.2";
                     maxFov = "0.233*2.2";
                     visionMode[] = {"Normal","NVG"};
-                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_Empty_Circle);
+                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner_Empty_Circle.p3d);
                     gunnerOpticsEffect[] = {};
                 };
                 class Narrow: Wide
@@ -67,7 +67,7 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
                             minFov = "0.233*1.5";
                             maxFov = "0.233*1.5";
                             visionMode[] = {"Normal","NVG"};
-                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Periscope);
+                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Periscope.p3d);
                             gunnerOpticsEffect[] = {};
                         };
                         class Narrow: Wide
@@ -75,7 +75,7 @@ class mkk_m60a1_base: mkk_m60a3_tts_base
                             initFov = "0.233/6";
                             minFov = "0.233/6";
                             maxFov = "0.233/6";
-                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Narrow);
+                            gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Commander_M60A1_Narrow.p3d);
                         };
                     };
                     weapons[] = {"mkk_m60_m85_nofcs"};
