@@ -28,7 +28,7 @@ class mkk_t55_wst_base: t55a_base {
                     initFov = "0.233";
                     minFov = "0.233";
                     maxFov = "0.233";
-                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner2_Empty_Circle);
+                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner2_Empty_Circle.p3d);
                     visionMode[] = {"Normal","NVG"};
                     gunnerOpticsEffect[] = {};
                 };
@@ -65,7 +65,7 @@ class mkk_t55a_wst_base: t55a_base {
                     initFov = "0.233";
                     minFov = "0.233";
                     maxFov = "0.233";
-                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner2_Empty_Circle);
+                    gunnerOpticsModel = QPATHTOF(data\models\WST_Optics_Gunner2_Empty_Circle.p3d);
                     visionMode[] = {"Normal","NVG"};
                     gunnerOpticsEffect[] = {};
                 };
